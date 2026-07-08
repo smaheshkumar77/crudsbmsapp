@@ -1,0 +1,6 @@
+Act as Java 21 and Spring Boot 4.0.6 Emgineer and generate the CRUD application using the postgres database which runs in the docker and H2 persistant database. The logic will be based on the feature flag ON | OFF. OFF means the data not yet migrated from H2 to Postgres and ON means the data migrated from H2 to Postgres. By default the feature flag being OFF where read has to be done in the H2 database and Write has to be done in both the H2 database and Postgres database. If the feature flag is set to ON, then the read and write operations has to be done in the Postgres. The database operations has to be in Async mode and in parallel using the CompletableFuture. During the feature flag is ON, and the insertion in H2 fails then rollback the transaction including Postgres irrespective.  
+
+
+Act as Docker Engineer, set up a Postgres database with the schema 'feature' and provide the access to the database with the connection details. 
+
+Act as database administrator, generate a sample database table structure for the CRUD operation. This is for H2 database and as well as to the Postgres database for the Spring Boot Application to set.
