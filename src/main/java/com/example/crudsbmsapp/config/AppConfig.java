@@ -25,9 +25,12 @@ public class AppConfig {
     public DataSource postgresDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/feature");
+        /*dataSource.setUrl("jdbc:postgresql://localhost:5432/feature");
         dataSource.setUsername("featureuser");
-        dataSource.setPassword("featurepass");
+        dataSource.setPassword("featurepass");*/
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/cruddb");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("mysecretpassword");
         return dataSource;
     }
 }
