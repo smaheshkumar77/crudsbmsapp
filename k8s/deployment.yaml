@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crudsbmsapp
+  labels:
+    app: crudsbmsapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crudsbmsapp
+  template:
+    metadata:
+      labels:
+        app: crudsbmsapp
+    spec:
+      containers:
+        - name: crudsbmsapp
+          image: crudsbmsapp:local
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: default
+            - name: POSTGRES_JDBC_URL
+              value: jdbc:h2:mem:postgresdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+            - name: POSTGRES_USER
+              value: sa
+            - name: POSTGRES_PASSWORD
+              value: ""
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: crudsbmsapp-service
+spec:
+  selector:
+    app: crudsbmsapp
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30080
