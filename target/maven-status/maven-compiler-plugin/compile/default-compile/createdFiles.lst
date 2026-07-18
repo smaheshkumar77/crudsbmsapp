@@ -3,6 +3,7 @@ com/example/crudsbmsapp/controller/ItemController.class
 com/example/crudsbmsapp/config/AppConfig.class
 com/example/crudsbmsapp/config/DatabaseInitConfig.class
 com/example/crudsbmsapp/repository/PostgresItemRepository.class
+com/example/crudsbmsapp/mcp/ItemMcpTools.class
 com/example/crudsbmsapp/config/FeatureFlagProperties.class
 com/example/crudsbmsapp/dto/ItemRequest.class
 com/example/crudsbmsapp/repository/ItemRepository.class

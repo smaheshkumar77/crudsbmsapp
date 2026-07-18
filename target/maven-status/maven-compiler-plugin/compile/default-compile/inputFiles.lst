@@ -5,6 +5,7 @@
 /workspaces/crudsbmsapp/src/main/java/com/example/crudsbmsapp/controller/ItemController.java
 /workspaces/crudsbmsapp/src/main/java/com/example/crudsbmsapp/dto/ItemRequest.java
 /workspaces/crudsbmsapp/src/main/java/com/example/crudsbmsapp/dto/ItemResponse.java
+/workspaces/crudsbmsapp/src/main/java/com/example/crudsbmsapp/mcp/ItemMcpTools.java
 /workspaces/crudsbmsapp/src/main/java/com/example/crudsbmsapp/repository/ItemRepository.java
 /workspaces/crudsbmsapp/src/main/java/com/example/crudsbmsapp/repository/PostgresItemRepository.java
 /workspaces/crudsbmsapp/src/main/java/com/example/crudsbmsapp/service/ItemService.java
